@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Amenoko</title>
+
+    <!-- CSS External File -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-blue-200">
+
+    <!-- Main Container Frame -->
+    <div class="w-full max-w-md bg-white shadow-2xl rounded-2xl p-6 border border-gray-200">
+
+        <!-- Header Section -->
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">My Todo List</h1>
+        </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <section class="todo-app flex flex-col gap-3 mb-4">
+                <input type="text" class="border rounded-lg p-2 w-full" id="todo-input" placeholder="Add a new task..." />
+                <input type="date" class="border rounded-lg p-2 w-full" id="todo-date" placeholder="Select due date..." />
+                <button class="bg-green-500 hover:bg-green-600 text-white rounded-lg p-2 transition" onclick="addTask();">Add</button>
+            </section>
+
+            <!-- Action Buttons Section -->
+            <section class="flex justify-between mb-4">
+                <button class="bg-gray-200 hover:bg-gray-300 rounded-lg p-2 transition" id="filter-btn">Filter</button>
+                <button class="bg-red-500 hover:bg-red-600 text-white rounded-lg p-2 transition" onclick="deleteAllTasks();">Delete All Tasks</button>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-700 mb-2">List of Tasks</h2>
+                <ul id="task-list" class="list-disc pl-5 text-gray-700">
+                    <li>No tasks added yet</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="text-center mt-6 border-t pt-4">
+            <p class="text-gray-600 text-sm">2025 Amenoko Todo List</p>
+            <h6 class="text-gray-500 italic text-sm">"Fokus pada progres, bukan kesempurnaan"</h6>
+        </footer>
+    </div>
+
+    <!-- Javascript External File -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
